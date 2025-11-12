@@ -24,6 +24,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test stage version two npm run test'
+                sh '''
+                    cat build/index.html
+                '''
             }
             
         }
