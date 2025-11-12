@@ -21,9 +21,9 @@ pipeline {
             }
         }
 
-        stage('Test stage') {
+        stage('Test') {
             steps {
-                echo 'Test stage version two'
+                echo 'Test stage version two npm run test'
             }
             
         }
