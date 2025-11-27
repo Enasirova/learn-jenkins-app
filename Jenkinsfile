@@ -101,7 +101,7 @@ pipeline {
 
             steps {
                 sh'''
-                input message: 'Ready for a deploy?', ok: 'Yes, I am sure I want to Deploy!'
+                input message: "Ready for a deploy?", ok: "Yes, I am sure I want to Deploy!"
                 '''
             }
         }
