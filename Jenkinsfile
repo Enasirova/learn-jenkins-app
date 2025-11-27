@@ -90,6 +90,22 @@ pipeline {
                 '''
             }
         }
+
+        stage('Approval'){
+            agent {
+                docker {
+                    image 'node:18-alpine'
+                    reuseNode true
+                }
+            }
+
+            steps {
+                sh'''
+                input message: 'Ready for a deploy?', ok: 'Yes, I am sure I want to Deploy!'
+                '''
+            }
+        }
+
         stage('Deploy prod') {
             agent {
                 docker{
